@@ -3,8 +3,8 @@
     <h3>Sign In</h3>
     <input type="text" placeholder="Email">
     <input type="password" placeholder="Password">
-    <button>Go</button>
-    <p>or you can <a href="#">Create account</a></p>
+    <button @click="login">Go</button>
+    <p>or you can <router-link to="/sign-up">Create account</router-link></p>
   </div>
 </template>
 
@@ -14,7 +14,11 @@ export default {
   data: function() {
     return {}
   },
-  methods: {}
+  methods: {
+    login: function() {
+      this.$router.replace('hello')
+    }
+  }
 }
 </script>
 
